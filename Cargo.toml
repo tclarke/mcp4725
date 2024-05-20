@@ -1,0 +1,21 @@
+[package]
+name = "mcp4725"
+edition = "2021"
+version = "0.1.0"
+authors = ["Trevor R.H. Clarke <retrev@csh.rit.edu>"]
+description = "Embedded I2C driver for MCP4725 12-bit DAC with EEPROM Memory"
+documentation = "https://docs.rs/mcp4725"
+repository = "https://github.com/tclarke/mcp4725"
+license = "MIT OR Apache-2.0"
+keywords = ["driver", "i2c", "mcp4725", "embedded", "embedded-hal"]
+publish = true
+
+[dependencies]
+embedded-hal = "0.2.7"
+num = { version = "0.4.3", default-features = false }
+
+[dev-dependencies]
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7.4"
+panic-halt = "0.2.0"
+stm32f1xx-hal = { version = "0.10.0", features = ["stm32f103", "medium"] }
